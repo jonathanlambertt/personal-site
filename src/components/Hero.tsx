@@ -1,9 +1,9 @@
 export function Hero() {
   return (
     <section className="mx-auto max-w-5xl px-20 py-32">
-      <p className="text-sm font-medium uppercase tracking-widest text-primary-600">
+      {/* <p className="text-sm font-medium uppercase tracking-widest text-primary-600">
         Designer & Developer
-      </p>
+      </p> */}
       <h1 className="mt-4 font-display text-6xl font-bold tracking-tight text-gray-900">
         Jonathan Lambert
       </h1>
