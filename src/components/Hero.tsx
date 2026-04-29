@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="mx-auto max-w-5xl px-20 py-32">
+    <section className="mx-auto max-w-5xl px-20 pt-20 pb-8">
       {/* <p className="text-sm font-medium uppercase tracking-widest text-primary-600">
         Designer & Developer
       </p> */}
