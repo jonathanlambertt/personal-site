@@ -2,7 +2,7 @@ import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <section className="mx-auto max-w-5xl px-20 pt-4 pb-12">
+    <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 md:px-12 lg:px-20">
       <p className="text-sm font-medium uppercase tracking-widest text-gray-600">
         Work Sample
       </p>

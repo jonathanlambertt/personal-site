@@ -72,7 +72,7 @@ Two fonts, loaded from Google Fonts (Figtree) and Fontshare (Satoshi) via `<link
 
 ### Size scale (in use)
 
-- Hero h1: `text-6xl` + `tracking-tight`
+- Hero h1: `text-4xl sm:text-5xl md:text-6xl` + `tracking-tight` (ramps from mobile to desktop)
 - Eyebrow: `text-sm` + `uppercase` + `tracking-widest`
 - Body lead: `text-lg`
 - Nav links / UI: `text-sm`
@@ -83,14 +83,14 @@ Two fonts, loaded from Google Fonts (Figtree) and Fontshare (Satoshi) via `<link
 
 ### Container
 
-Every full-width section uses the same container shell:
+Every full-width section uses the same responsive container shell:
 
 ```tsx
-<section className="mx-auto max-w-5xl px-6 ...">
+<section className="mx-auto max-w-5xl px-6 md:px-12 lg:px-20 ...">
 ```
 
 - `max-w-5xl` (1024px) is the column width. Stay consistent — do not introduce other max widths without good reason.
-- `px-6` horizontal padding — applied to nav and content sections alike.
+- Horizontal gutters ramp by viewport: `px-6` (mobile) → `md:px-12` (tablet, ≥768px) → `lg:px-20` (desktop, ≥1024px). Apply this same triplet to nav and every content section so vertical edges align across the page.
 
 ### Section vertical rhythm
 
@@ -147,6 +147,26 @@ Notes:
 - `py-3` and `-my-3` on the link are both coupled to nav `py-3`. If you change nav `py-*`, change all three to match (link `py-N` = link `-my-N` = nav `py-N`).
 - The Logo doesn't use the inline-block + negative-margin trick because its `<a>` is already `inline-flex` with geometry that puts its own bottom at the nav content bottom; `-bottom-3` then places the pseudo at the navbar border. The pseudo's `inset-x-0` makes the underline span the full width of the inline-flex `<a>` — i.e., dot + gap + JL — as one continuous line.
 - Both pseudos use `h-0.5` (2px) so the underlines read as one consistent visual element across the navbar.
+
+### Nav (mobile)
+
+Below `md` (<768px), the inline `<ul>` of links is hidden and replaced with a hamburger button on the right. Tapping it toggles a stacked panel positioned absolutely just below the navbar.
+
+- Toggle button: `md:hidden`, ~44px square hit target, inline SVG (three lines → X when open). Wires up `aria-label="Toggle menu"`, `aria-expanded`, `aria-controls`.
+- Inline links list: `hidden md:flex` so the desktop treatment stays untouched at `md+`.
+- Open panel: `absolute inset-x-0 top-full z-10 border-b border-gray-200 bg-gray-50 md:hidden`. Each link is `block px-6 py-4 text-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900`, separated by `border-t border-gray-200`. No underline reveal on stacked rows — the row-highlight on hover does the same job.
+- State lives in `Nav.tsx` via `useState`. Link clicks close the menu; an `Escape` key listener (added while open) also closes it.
+
+```tsx
+const [open, setOpen] = useState(false);
+
+useEffect(() => {
+  if (!open) return;
+  const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+  window.addEventListener("keydown", onKey);
+  return () => window.removeEventListener("keydown", onKey);
+}, [open]);
+```
 
 ### Section with eyebrow heading
 

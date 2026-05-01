@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const links = [
@@ -10,11 +11,22 @@ const links = [
 ];
 
 export function Nav() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
-    <header className="border-b border-gray-200">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-20 py-3">
+    <header className="relative border-b border-gray-200">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-12 lg:px-20">
         <Logo />
-        <ul className="flex gap-10 text-lg/9 text-gray-600">
+        <ul className="hidden gap-10 text-lg/9 text-gray-600 md:flex">
           {links.map((link) => {
             const isExternal = link.href.startsWith("http");
             return (
@@ -31,7 +43,63 @@ export function Nav() {
             );
           })}
         </ul>
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          onClick={() => setOpen((v) => !v)}
+          className="-mr-2 inline-flex h-10 w-10 items-center justify-center text-gray-900 md:hidden"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            {open ? (
+              <>
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </>
+            ) : (
+              <>
+                <line x1="4" y1="7" x2="20" y2="7" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="17" x2="20" y2="17" />
+              </>
+            )}
+          </svg>
+        </button>
       </nav>
+      {open && (
+        <ul
+          id="mobile-nav"
+          className="absolute inset-x-0 top-full z-10 border-b border-gray-200 bg-gray-50 md:hidden"
+        >
+          {links.map((link) => {
+            const isExternal = link.href.startsWith("http");
+            return (
+              <li key={link.href} className="border-t border-gray-200 first:border-t-0">
+                <a
+                  href={link.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  onClick={() => setOpen(false)}
+                  className="block px-6 py-4 text-lg text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </header>
   );
 }
