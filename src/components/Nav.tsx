@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const links = [
-  { label: "Projects", href: "#projects" },
   {
     label: "Resume",
     href: "https://drive.google.com/file/d/1B5s_IRE81i_e6DiI_ENcx1N_8P-6VAf3/view?usp=sharing",
   },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
 ];
 
 export function Nav() {
@@ -23,7 +22,7 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header className="relative border-b border-gray-200">
+    <header className="relative border-b border-gray-200 bg-white">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-12 lg:px-20">
         <Logo />
         <ul className="hidden gap-10 text-lg/9 text-gray-600 md:flex">
@@ -85,7 +84,10 @@ export function Nav() {
           {links.map((link) => {
             const isExternal = link.href.startsWith("http");
             return (
-              <li key={link.href} className="border-t border-gray-200 first:border-t-0">
+              <li
+                key={link.href}
+                className="border-t border-gray-200 first:border-t-0"
+              >
                 <a
                   href={link.href}
                   target={isExternal ? "_blank" : undefined}

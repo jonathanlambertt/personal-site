@@ -1,27 +1,29 @@
 export type Project = {
-  slug: string;
+  owner: string;
   name: string;
-  platform: string;
   description: string;
   href: string;
-  image?: string;
+  language: string;
+  languageColor: string;
+  stars?: number;
 };
 
 export const projects: Project[] = [
   {
-    slug: "wayfinding-pnnl",
-    name: "Wayfinding at PNNL",
-    platform: "mobile",
-    description: "map service",
-    href: "#",
-    image: "/images/project1.png",
+    owner: "jonathanlambertt",
+    name: "strivvy",
+    description:
+      "Social link sharing iOS app built with React Native and Django.",
+    href: "https://github.com/jonathanlambertt/strivvy-frontend/blob/main/README.md",
+    language: "JavaScript",
+    languageColor: "#f1e05a",
   },
   {
-    slug: "tabletop",
-    name: "Tabletop",
-    platform: "web",
-    description: "board game app",
-    href: "#",
-    image: "",
+    owner: "jonathanlambertt",
+    name: "tabletop",
+    description: "Board game meetup website built with React and Supabase.",
+    href: "https://github.com/jonathanlambert/tabletop",
+    language: "TypeScript",
+    languageColor: "#3178c6",
   },
 ];
