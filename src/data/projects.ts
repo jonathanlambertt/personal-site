@@ -1,29 +1,22 @@
 export type Project = {
-  owner: string;
   name: string;
   description: string;
   href: string;
-  language: string;
-  languageColor: string;
-  stars?: number;
+  image: string;
 };
 
 export const projects: Project[] = [
   {
-    owner: "jonathanlambertt",
-    name: "strivvy",
+    name: "Strivvy",
     description:
       "Social link sharing iOS app built with React Native and Django.",
     href: "https://github.com/jonathanlambertt/strivvy-frontend/blob/main/README.md",
-    language: "JavaScript",
-    languageColor: "#f1e05a",
+    image: "/images/strivvy_project.png",
   },
   {
-    owner: "jonathanlambertt",
-    name: "tabletop",
+    name: "Tabletop",
     description: "Board game meetup website built with React and Supabase.",
-    href: "https://github.com/jonathanlambert/tabletop",
-    language: "TypeScript",
-    languageColor: "#3178c6",
+    href: "https://tabletop.sh/",
+    image: "/images/project1.png",
   },
 ];

@@ -22,7 +22,7 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header className="relative border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-20 border-b border-gray-200 bg-white">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-12 lg:px-20">
         <Logo />
         <ul className="hidden gap-10 text-lg/9 text-gray-600 md:flex">
