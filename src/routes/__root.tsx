@@ -14,7 +14,10 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Jonathan Lambert Portfolio" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/images/favicon.svg" },
+    ],
   }),
 
   shellComponent: RootDocument,
