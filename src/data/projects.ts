@@ -2,7 +2,7 @@ export type Project = {
   name: string;
   description: string;
   href: string;
-  image: string;
+  image: string | null;
 };
 
 export const projects: Project[] = [
@@ -17,6 +17,6 @@ export const projects: Project[] = [
     name: "Tabletop",
     description: "Board game meetup website built with React and Supabase.",
     href: "https://tabletop.sh/",
-    image: "/images/project1.png",
+    image: null,
   },
 ];
