@@ -12,7 +12,9 @@ export function About() {
               When I'm not building, you'll find me playing board games,
               studying Japanese, or reading about computer history.
             </p>
-            <p>Learning: ML fundamentals, human-computer interaction</p>
+            <p>
+              Learning: ML fundamentals, human-computer interaction, typography
+            </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
             <a

@@ -35,19 +35,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link
-          rel="preconnect"
-          href="https://cdn.fontshare.com"
-          crossOrigin="anonymous"
-        />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@500,600,700,900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;900&display=swap"
         />
       </head>
       <body>
