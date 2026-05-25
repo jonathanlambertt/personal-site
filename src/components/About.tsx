@@ -5,11 +5,14 @@ export function About() {
   return (
     <section className="mx-auto max-w-5xl px-6 pt-16 pb-8 md:px-12 md:pt-20 lg:px-20">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-16">
-        <div className="flex-1 text-xl text-gray-600 md:text-2xl">
+        <div className="flex-1 text-lg text-gray-900 md:text-2xl leading-normal">
           <h1>Hello!</h1>
           <div className="mt-6 max-w-2xl space-y-4">
-            <p>I like to build software.</p>
-            <p></p>
+            <p>
+              When I'm not building, you'll find me playing board games,
+              studying Japanese, or reading about computer history.
+            </p>
+            <p>Learning: ML fundamentals, human-computer interaction</p>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
             <a

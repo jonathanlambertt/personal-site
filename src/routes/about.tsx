@@ -3,6 +3,9 @@ import { About } from "@/components/About";
 import { Nav } from "@/components/Nav";
 
 export const Route = createFileRoute("/about")({
+  head: () => ({
+    meta: [{ title: "About" }],
+  }),
   component: AboutPage,
 });
 
