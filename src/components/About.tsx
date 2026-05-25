@@ -18,6 +18,14 @@ export function About() {
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
             <a
+              href="https://github.com/jonathanlambertt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClass}
+            >
+              GitHub
+            </a>
+            <a
               href="https://www.linkedin.com/in/jondlambert/"
               target="_blank"
               rel="noopener noreferrer"
