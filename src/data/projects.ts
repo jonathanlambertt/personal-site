@@ -13,16 +13,4 @@ export const projects: Project[] = [
     href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
     image: "/images/strivvy_project.png",
   },
-  {
-    name: "Tabletop",
-    description: "Board game meetup website built with React and Supabase.",
-    href: "https://tabletop.sh/",
-    image: null,
-  },
-  {
-    name: "Dodge the Spike",
-    description: "Simple 2D game built with the Godot game engine.",
-    href: "https://jonlambert.itch.io/dodge-the-spike",
-    image: null,
-  },
 ];
