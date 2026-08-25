@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-10 md:px-12 lg:px-20">
       <p className="text-sm font-medium uppercase tracking-widest text-gray-600">
-        WORK SAMPLE
+        PERSONAL PROJECTS
       </p>
       <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2">
         {projects.map((project) => (

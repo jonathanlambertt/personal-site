@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 const links = [
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1B5s_IRE81i_e6DiI_ENcx1N_8P-6VAf3/view?usp=sharing",
+    href: "https://docs.google.com/document/d/13ff_9-y0BcR7A7Ag1sqhadCDFdoSSsq-i19smcua0OQ/edit?usp=sharing",
   },
   { label: "About", href: "/about" },
 ];

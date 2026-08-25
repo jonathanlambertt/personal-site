@@ -7,22 +7,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "Strivvy",
+    name: "Cinebook",
     description:
-      "Social link sharing iOS app built with React Native and Django.",
-    href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
-    image: "/images/strivvy_project.png",
+      "Social movie logging app. Rate, log, and share your movie taste with friends.",
+    href: "https://github.com/jonathanlambertt/movie-log",
+    image: "/images/cinebook-thumbnail-v2.png",
   },
   {
-    name: "Tabletop",
-    description: "Board game meetup website built with React and Supabase.",
+    name: "Tabletop.sh",
+    description: "Board game meetup website for the Tri-Cities.",
     href: "https://tabletop.sh/",
     image: null,
   },
   {
-    name: "Dodge the Spike",
-    description: "Simple 2D game built with the Godot game engine.",
-    href: "https://jonlambert.itch.io/dodge-the-spike",
-    image: null,
+    name: "Strivvy",
+    description: "Link sharing iOS app built with React Native and Django.",
+    href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
+    image: "/images/strivvy-thumbnail-v2.png",
   },
 ];
