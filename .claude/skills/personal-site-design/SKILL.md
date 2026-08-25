@@ -56,16 +56,16 @@ All design tokens live in `src/styles.css` inside a Tailwind v4 `@theme` block �
 
 ## Typography
 
-Two fonts, loaded from Google Fonts (Figtree) and Fontshare (Satoshi) via `<link>` tags in `src/routes/__root.tsx`.
+Single font for now — Figtree, loaded from Google Fonts via a `<link>` tag in `src/routes/__root.tsx`. Both `--font-sans` and `--font-display` point to the same Figtree stack, so `font-display` (Logo, h1/h2 headings) and `font-sans` (body copy, nav links, UI labels) render identically until a second display face is reintroduced.
 
 | Family | Tailwind class | CSS var | Used for |
 |---|---|---|---|
-| **Satoshi** | `font-display` | `--font-display` | Logo, h1/h2 headings, anything that should feel "branded" |
 | **Figtree** | `font-sans` *(default)* | `--font-sans` | All body copy, nav links, UI labels, eyebrows, buttons |
+| **Figtree** | `font-display` | `--font-display` | Logo, h1/h2 headings, anything that should feel "branded" |
 
 ### Weight conventions
 
-- Logo / display headings: `font-bold` (700) — Satoshi available at 500/600/700/900
+- Logo / display headings: `font-bold` (700) — Figtree available at 400/500/600/700/800/900
 - Body: `font-normal` (400) by default
 - UI labels & eyebrows: `font-medium` (500)
 - Avoid italics; use weight + size for emphasis
