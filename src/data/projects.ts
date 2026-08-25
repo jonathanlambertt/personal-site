@@ -13,6 +13,7 @@ export const projects: Project[] = [
     href: "https://github.com/jonathanlambertt/movie-log",
     image: "/images/cinebook-thumbnail-v2.png",
   },
+<<<<<<< HEAD
   {
     name: "Tabletop.sh",
     description: "Board game meetup website for the Tri-Cities.",
@@ -25,4 +26,6 @@ export const projects: Project[] = [
     href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
     image: "/images/strivvy-thumbnail-v2.png",
   },
+=======
+>>>>>>> 6db3616ccff2572ce0f36fda74e5ad1796751bb4
 ];
