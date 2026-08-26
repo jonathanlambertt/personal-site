@@ -9,8 +9,8 @@ export function About() {
           <h1>Hello!</h1>
           <div className="mt-6 max-w-2xl space-y-4">
             <p>
-              When I'm not building, you'll find me playing board games,
-              studying Japanese, or reading about computer history.
+              When I'm not building you'll find me playing games, studying
+              Japanese, or reading about computer history.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
@@ -38,7 +38,7 @@ export function About() {
         <img
           src="/images/me.jpeg"
           alt="Jonathan Lambert"
-          className="w-full max-w-xs shrink-0 rounded-lg object-cover md:w-72 lg:w-80"
+          className="aspect-square w-full max-w-xs shrink-0 rounded-full object-cover ring-1 ring-inset ring-black/20 md:w-72 lg:w-80"
         />
       </div>
     </section>
