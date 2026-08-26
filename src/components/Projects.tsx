@@ -17,7 +17,7 @@ export function Projects() {
               className={
                 project.image
                   ? "group block"
-                  : "group block border border-gray-200 p-6"
+                  : "group block border border-gray-200 p-6 rounded-lg"
               }
             >
               {project.image && (
@@ -25,7 +25,7 @@ export function Projects() {
                   <img
                     src={project.image}
                     alt=""
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02] rounded-lg"
                   />
                 </div>
               )}
