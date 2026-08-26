@@ -45,7 +45,7 @@ export function Projects() {
                   className="mt-1 shrink-0 text-gray-400 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-gray-900"
                 />
               </div>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-lg text-gray-600">
                 {project.description}
               </p>
             </a>
