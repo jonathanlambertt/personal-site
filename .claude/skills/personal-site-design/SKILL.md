@@ -204,6 +204,21 @@ Used in the Projects grid. Flat aesthetic — no shadows, borders, or rounded co
 - Meta line uses pipe (`|`) separator — `platform | description`.
 - Wrap the card in `<a className="group block">` so the whole card is clickable and the image can react to hover.
 
+**No-image variant**: when `project.image` is `null`, drop the image box entirely (never render an `<img>` with an empty/`"null"` `src`) and give the card's content a simple border instead:
+
+```tsx
+<a className="group block border border-gray-200 p-6">
+  <div className="flex items-start justify-between gap-4">
+    <h3 className="font-sans text-xl font-bold text-gray-900">{name}</h3>
+    <ArrowUpRight ... />
+  </div>
+  <p className="mt-1 text-sm text-gray-600">{description}</p>
+</a>
+```
+
+- `border border-gray-200` (the standard divider token) plus `p-6` gives the text-only card its own visual boundary instead of floating unanchored next to image cards in the grid.
+- No `mt-4` before the title row here — the box's own `p-6` padding provides the top offset that the image box's height otherwise gave.
+
 ---
 
 ## Spacing & layout conventions
