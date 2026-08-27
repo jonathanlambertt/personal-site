@@ -38,7 +38,7 @@ export function About() {
         <img
           src="/images/me.jpeg"
           alt="Jonathan Lambert"
-          className="aspect-square w-full max-w-xs shrink-0 rounded-full object-cover ring-1 ring-inset ring-black/20 md:w-72 lg:w-80"
+          className="aspect-square w-full max-w-[12rem] shrink-0 rounded-full object-cover ring-2 ring-inset ring-black/20 md:w-40 lg:w-44"
         />
       </div>
     </section>
