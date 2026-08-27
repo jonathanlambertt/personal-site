@@ -14,15 +14,22 @@ export const projects: Project[] = [
     image: "/images/cinebook-thumbnail-v2.png",
   },
   {
+    name: "Strivvy",
+    description: "Link sharing iOS app built with React Native and Django.",
+    href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
+    image: "/images/strivvy-thumbnail-v2.png",
+  },
+  {
     name: "Tabletop.sh",
     description: "Board game meetup website for the Tri-Cities.",
     href: "https://tabletop.sh/",
     image: null,
   },
   {
-    name: "Strivvy",
-    description: "Link sharing iOS app built with React Native and Django.",
-    href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
-    image: "/images/strivvy-thumbnail-v2.png",
+    name: "PicturePool",
+    description:
+      "Group photo sharing tool. Built during my time at Stanford University.",
+    href: "https://github.com/lab-w/Snapool",
+    image: null,
   },
 ];
