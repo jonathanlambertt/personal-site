@@ -3,7 +3,7 @@ const linkClass =
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200">
+    <footer className="border-t border-gray-200 bg-zinc-50">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-8 text-sm sm:flex-row sm:items-center sm:justify-between md:px-12 lg:px-20">
         <p className="text-gray-600">
           © {new Date().getFullYear()} Jonathan Lambert
