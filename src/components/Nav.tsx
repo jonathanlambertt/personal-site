@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const links = [
-  {
-    label: "Resume",
-    href: "https://docs.google.com/document/d/13ff_9-y0BcR7A7Ag1sqhadCDFdoSSsq-i19smcua0OQ/edit?usp=sharing",
-  },
   { label: "About", href: "/about" },
 ];
 
