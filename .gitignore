@@ -11,3 +11,4 @@ dist
 .env.local
 .env.*.local
 src/routeTree.gen.ts
+.aider*
