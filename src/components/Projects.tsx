@@ -48,6 +48,11 @@ export function Projects() {
               <p className="mt-1 text-lg text-gray-600">
                 {project.description}
               </p>
+              {project.subDescription && (
+                <p className="mt-1 text-lg text-gray-400">
+                  {project.subDescription}
+                </p>
+              )}
             </a>
           </li>
         ))}
