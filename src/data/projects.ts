@@ -15,13 +15,13 @@ export const projects: Project[] = [
     href: "https://github.com/jonathanlambertt/movie-log",
     image: "/images/cinebook-thumbnail-v2.png",
   },
-  {
-    name: "Strivvy",
-    description: "Link sharing mobile app. Like and share links with friends.",
-    subDescription: "React Native · Django",
-    href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
-    image: "/images/strivvy-thumbnail-v2.png",
-  },
+  // {
+  //   name: "Strivvy",
+  //   description: "Link sharing mobile app. Like and share links with friends.",
+  //   subDescription: "React Native · Django",
+  //   href: "https://github.com/jonathanlambertt/strivvy-frontend/tree/main",
+  //   image: "/images/strivvy-thumbnail-v2.png",
+  // },
   {
     name: "Tabletop.sh",
     description: "Board game meetup website for the Tri-Cities.",
